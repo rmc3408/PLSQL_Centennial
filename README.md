@@ -19,11 +19,13 @@ https://quizlet.com/335886056/handling-data-in-plsql-blocks-flash-cards/
 
 
 #### Chapter 02
-
+https://quizlet.com/174883018/plsql-chapter-2-basic-plsql-block-structures-flash-cards/
 
 #### Chapter 01
-
+https://quizlet.com/174729433/plsql-chapter-1-introduction-to-plsql-flash-cards/
 
 
 
 ## SQL
+https://quizlet.com/254631826/oracle-12c-sql-chapter-6-flash-cards/
+https://quizlet.com/254249655/oracle-12c-sql-chapter-13-flash-cards/
