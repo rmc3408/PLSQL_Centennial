@@ -4,6 +4,12 @@
 ## PL/SQL
 
 
+#### Chapter 04
+https://quizlet.com/174950507/plsql-chapter-4-cursors-and-exception-handling-flash-cards/
+
+https://quizlet.com/189257944/itse-1345-chapter-4-oracle-database-12c-plsql-programming-flash-cards/
+
+
 #### Chapter 03
 https://quizlet.com/188976600/itse-1345-chapter-3-oracle-database-12c-plsql-programming-flash-cards/
 
