@@ -42,9 +42,10 @@ VALUES (dd_projid_seq.NEXTVAL, new_project.p_name, new_project.p_start, new_proj
 COMMIT; 
 END;
 
+
+drop sequence dd_projid_seq;
+delete from dd_project where idproj = 530;
 SELECT * FROM dd_project;
-
-
 
 
 -- Question 3-11
@@ -121,8 +122,12 @@ BEGIN
   UPDATE dd_project
   SET projfundgoal = new_Fgoal
   WHERE idproj = p_id;  
+  
 DBMS_OUTPUT.PUT_LINE('Project Name: ' || p_name);
 DBMS_OUTPUT.PUT_LINE('Start Date: ' || d_start );
 DBMS_OUTPUT.PUT_LINE('Previous Goal: ' || f_goal);
 DBMS_OUTPUT.PUT_LINE('New Goal: ' || new_Fgoal); 
 END;
+
+
+
