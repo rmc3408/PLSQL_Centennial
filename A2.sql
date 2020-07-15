@@ -22,6 +22,12 @@ END;
 
 -- Question 3-10
 
+drop sequence dd_projid_seq;
+delete from dd_project where idproj = 530;
+SELECT * FROM dd_project;
+
+
+
 CREATE SEQUENCE dd_projid_seq
   START WITH     530
   INCREMENT BY   1
@@ -42,10 +48,6 @@ VALUES (dd_projid_seq.NEXTVAL, new_project.p_name, new_project.p_start, new_proj
 COMMIT; 
 END;
 
-
-drop sequence dd_projid_seq;
-delete from dd_project where idproj = 530;
-SELECT * FROM dd_project;
 
 
 -- Question 3-11
