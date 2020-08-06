@@ -1,4 +1,4 @@
----- ASSIGNMENT 9-9 
+-- ASSIGNMENT 9-9 
 
 CREATE TABLE dd_paytrack(
     track_idtrack         NUMBER,
@@ -10,11 +10,8 @@ CREATE TABLE dd_paytrack(
     );
 
 
----- SEQUENCE
 CREATE SEQUENCE dd_ptrack_seq;
 
-
---- TRIGGER
 CREATE OR REPLACE TRIGGER trigger_activity_pay
     AFTER 
         INSERT OR 
@@ -44,7 +41,6 @@ CREATE OR REPLACE TRIGGER trigger_activity_pay
     END trigger_activity_pay;
 
 
------ SQL STATEMENT TO TEST TRIGGER
 INSERT INTO dd_payment(idpay, idpledge, payamt, paydate, paymethod)
 VALUES (1465, 100, 0, SYSDATE, 'CC');
 
@@ -57,43 +53,35 @@ commit;
 
 
 
+-- ASSIGNMENT 9-10 
 
----- ASSIGNMENT 9-10 
-
-CREATE OR REPLACE TRIGGER fp_check_add 
-    for insert on dd_pledge   
-    compound trigger     
+CREATE OR REPLACE TRIGGER firstPledge_check_add FOR INSERT ON dd_pledge   
+  compound trigger     
     
-    yes_pledge     constant dd_pledge.firstpledge%type := 'Y';
-    no_pledge      constant dd_pledge.firstpledge%type := 'N';
+  yes_pledge     constant dd_pledge.firstpledge%type := 'Y';
+  no_pledge      constant dd_pledge.firstpledge%type := 'N';
     
-    type      doners_type is table of dd_pledge.iddonor%type;   
-    v_doners  doners_type := doners_type();    
+  type      don_type is table of dd_pledge.iddonor%type;   
+  v_don  don_type := don_type();    
 
-    before each row is    
+  before each row is    
     begin  
-        v_doners.extend;
-        v_doners (v_doners.count)  :=  :new.iddonor;    
+        v_don.extend;
+        v_don (v_don.count)  :=  :new.iddonor;    
         :new.firstpledge           := no_pledge;     
     end before each row;    
 
-    after statement is                  
+  after statement is                  
     begin      
-       forall i_doner in 1 .. v_doners.count
-         update dd_pledge   p1 
-            set firstpledge = yes_pledge
-          where p1.iddonor = v_doners(i_doner) 
-            and not exists 
-                ( select null 
-                    from dd_pledge p2
-                   where p1.iddonor = p2.iddonor
-                     and p1.rowid != p2.rowid
-                );    
-    end after statement;    
-end fp_check_add;
+    forall i_doner in 1 .. v_don.count
+    update dd_pledge   p1 
+      set firstpledge = yes_pledge
+      where p1.iddonor = v_don(i_doner) 
+      and not exists ( select null from dd_pledge p2
+          where p1.iddonor = p2.iddonor and p1.rowid != p2.rowid );    
+    end after statement;
 
-
----- SQL STATEMENT TO TEST TRIGGER
+end firstPledge_check_add;
 
 INSERT INTO DD_PLEDGE(IDPLEDGE, IDDONOR, PLEDGEDATE, PLEDGEAMT, IDPROJ,
  IDSTATUS, WRITEOFF, PAYMONTHS, CAMPAIGN, FIRSTPLEDGE)
