@@ -3,6 +3,21 @@
 
 ## PL/SQL
 
+#### Chapter 09
+https://quizlet.com/287976779/database-development-ii-chapter-9-flash-cards/
+
+
+#### Chapter 07
+https://quizlet.com/175622569/plsql-chapter-7-plsql-packages-flash-cards/
+
+
+#### Chapter 06
+https://quizlet.com/ca/258177344/plsql-chapter-6-functions-flash-cards/
+
+
+#### Chapter 05
+https://quizlet.com/174951672/plsql-chapter-5-procedures-flash-cards/
+
 
 #### Chapter 04
 https://quizlet.com/174950507/plsql-chapter-4-cursors-and-exception-handling-flash-cards/
@@ -23,7 +38,6 @@ https://quizlet.com/174883018/plsql-chapter-2-basic-plsql-block-structures-flash
 
 #### Chapter 01
 https://quizlet.com/174729433/plsql-chapter-1-introduction-to-plsql-flash-cards/
-
 
 
 ## SQL
