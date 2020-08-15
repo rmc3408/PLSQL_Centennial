@@ -7,6 +7,14 @@
 https://quizlet.com/287976779/database-development-ii-chapter-9-flash-cards/
 
 
+#### Chapter 08
+https://quizlet.com/287962842/database-development-ii-chapter-8-flash-cards/
+
+https://quizlet.com/412624199/plsql-chapter-8-program-unit-dependencies-flash-cards/
+
+https://quizlet.com/ca/256090997/chapter-8-dependencies-privileges-and-compilation-review-questions-flash-cards/
+
+
 #### Chapter 07
 https://quizlet.com/175622569/plsql-chapter-7-plsql-packages-flash-cards/
 
